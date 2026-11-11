@@ -8,6 +8,20 @@ Every screen is shown, with the exact button to click.
 
 By Ekai Stone, Jupiter Revenue Systems.
 
+## Do it in one command
+
+Already comfortable in Terminal? On the Mac mini, this sets the always-on settings from [Part 3](guide/03-remote-access.md) and [Part 4](guide/04-always-on.md) for you. It shows the plan and asks before it changes anything:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/jupiter-revenue-systems/always-on-ai-mac-mini/main/scripts/always-on.sh | bash
+```
+
+- See what it would do, change nothing: add `-s -- --dry-run` after `bash`.
+- Check your current settings: `-s -- --status`.
+- Put it all back: `-s -- --undo`.
+
+It only changes what the guide covers. FileVault and automatic login need your password, so it checks them and tells you where to click. The script is [here](scripts/always-on.sh) if you want to read it first.
+
 ## Who it's for
 
 Coaches, consultants, creators, agencies and service businesses that want AI agents running sales and ops, not just a chat window.

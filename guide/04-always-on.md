@@ -2,6 +2,26 @@
 
 [Back to the contents](../README.md#the-guide)
 
+## Do it in one command
+
+On the Mac mini, open **Terminal** and paste this. It shows the plan and asks before it changes anything:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/jupiter-revenue-systems/always-on-ai-mac-mini/main/scripts/always-on.sh | bash
+```
+
+It sets Step 10's Energy settings, Part 3's Screen Sharing and Remote Login, and restart after a freeze (that one has no switch in System Settings). It only changes what this guide covers. It checks FileVault and automatic login but leaves them to you, since they need your password. Do Step 10's FileVault part and Step 11 by hand.
+
+Other ways to run it:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/jupiter-revenue-systems/always-on-ai-mac-mini/main/scripts/always-on.sh | bash -s -- --dry-run   # show every command, change nothing
+curl -fsSL https://raw.githubusercontent.com/jupiter-revenue-systems/always-on-ai-mac-mini/main/scripts/always-on.sh | bash -s -- --status    # current values next to the targets
+curl -fsSL https://raw.githubusercontent.com/jupiter-revenue-systems/always-on-ai-mac-mini/main/scripts/always-on.sh | bash -s -- --undo      # put back what it changed
+```
+
+Or click through the steps below. Same result.
+
 ## Step 10. Never sleep, turn back on after a power cut, FileVault off
 
 On the Mac mini:
